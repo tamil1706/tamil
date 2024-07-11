@@ -29,6 +29,47 @@
 </head>
 
 <body>
+  <style> 
+
+.btn {
+    width: 200px; /* Adjust width as needed */
+    height: 40px;
+    margin-top: 20px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    background: linear-gradient(45deg, #aadff4 0%, #1b17f4 60%);
+    font-size: 19px;
+    font-weight: 500;
+    color: #eee;
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+    overflow: hidden;
+    transition: background 0.3s ease;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(45deg, #f417de 0%, #098dc1 60%);
+    transition: width 0.5s ease;
+    z-index: -1;
+}
+
+.btn:hover {
+    color: #eee;
+    background: linear-gradient(45deg, #098dc1 0%, #f417de 60%);
+}
+
+.btn:hover::before {
+    width: 100%;
+}
+</style>
 
   <!-- ======= Mobile nav toggle button ======= -->
   <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
@@ -424,11 +465,14 @@ and make a positive impact through cutting-edge solutions
                 <li>Cooking</li>
               </ul>
             </div>
-            
+            <div class="text-center mt-4">
+              <a href="img/resume.pdf" class="btn btn-primary" download>Download Resume</a>
+          </div>
     
           </div>
         </div>
-    
+      
+       
       </div>
     </section>
     <!-- End Resume Section -->
