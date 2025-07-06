@@ -292,7 +292,7 @@ h6 {
     margin-bottom: 30px;
   }
   #hero{
-    background-image: url("../img/h2.jpg");
+    background-image: url("../img/hero-bg.jpg");
   }
 }
 
@@ -1095,5 +1095,57 @@ section {
     position: static;
     width: auto;
     padding-right: 20px 15px;
+  }
+}
+.logo-slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  background-color: #f9f9f9; /* optional */
+  padding: 10px 0;
+}
+
+.logo-slider-track {
+  display: flex;
+  width: calc(250px * 28); /* Adjust based on total logos */
+  animation: scroll 40s linear infinite;
+}
+
+.logo-v1 {
+  flex: 0 0 auto;
+  width: 250px;
+  padding: 0 15px;
+}
+
+.logo-v1 img {
+  max-width: 100%;
+  height: auto;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.logo-v1 img:hover {
+  filter: grayscale(0%);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .logo-v1 {
+    width: 150px;
+    padding: 0 10px;
+  }
+
+  .logo-slider-track {
+    width: calc(150px * 28);
+    animation-duration: 30s;
   }
 }
